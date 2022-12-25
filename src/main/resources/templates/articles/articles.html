@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>articles</title>
+</head>
+<body>
+<div>
+	<h4>articles</h4>
+</div>
+
+<div>
+	<table>
+		<thead>
+			<tr>
+				<th>게시글 ID</th>
+				<th>subject</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="article : ${articles}">
+				<td><a href="article.html" th:href="@{|/articles/${article.id}|}" th:text="${article.id}">id</a></td>
+                <td><a href="article.html" th:href="@{|/articles/${article.id}|}" th:text="${article.subject}">제목</a></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</body>
+</html>
