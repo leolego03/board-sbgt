@@ -3,27 +3,40 @@
 <head>
 	<meta charset="UTF-8">
 	<title>articles</title>
+	<link th:href="@{/css/style.css}" rel="stylesheet" />
 </head>
 <body>
-<div>
-	<h4>articles</h4>
-</div>
-
-<div>
-	<table>
-		<thead>
-			<tr>
-				<th>게시글 ID</th>
-				<th>subject</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr th:each="article : ${articles}">
-				<td><a href="article.html" th:href="@{|/articles/${article.id}|}" th:text="${article.id}">id</a></td>
-                <td><a href="article.html" th:href="@{|/articles/${article.id}|}" th:text="${article.subject}">제목</a></td>
-			</tr>
-		</tbody>
-	</table>
-</div>
+	<div class="title-con">
+		<h4>articles</h4>
+	</div>
+	
+	<div class="articles-con">
+		<table>
+			<thead>
+				<tr>
+					<th>article id</th>
+					<th>subject</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="article : ${articles}">
+					<td><a href="article.html" th:href="@{|/articles/${article.id}|}" th:text="${article.id}">id</a></td>
+	                <td><a href="article.html" th:href="@{|/articles/${article.id}|}" th:text="${article.subject}">제목</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+	<div class="articlesb-con">
+        <button onclick="location.href='addArticleForm.html'"
+                th:onclick="|location.href='@{/articles/addArticleForm}'|"
+                type="button">add article</button>
+    </div>
+    
+    <div class="articlesb-con">
+        <button onclick="location.href='home.html'"
+                th:onclick="|location.href='@{/}'|"
+                type="button">home</button>
+    </div>
 </body>
 </html>

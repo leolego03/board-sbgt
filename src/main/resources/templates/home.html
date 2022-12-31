@@ -3,19 +3,20 @@
 <head>
 	<meta charset="UTF-8">
 	<title>home</title>
+	<link th:href="@{/css/style.css}" rel="stylesheet" />
 </head>
 <body>
-<div>
-	<h4>home</h4>
-</div>
-
-<div>
-	<div class="homeb-con">
-		<button type="button"
-				th:onclick="|location.href='@{/articles}'|">
-			articles
-		</button>
+	<div class="title-con">
+		<h4>home</h4>
 	</div>
-</div>
+	
+	<div>
+		<div class="homeb-con">
+			<button type="button"
+					th:onclick="|location.href='@{/articles}'|">
+				articles
+			</button>
+		</div>
+	</div>
 </body>
 </html>

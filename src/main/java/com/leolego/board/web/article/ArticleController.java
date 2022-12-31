@@ -1,7 +1,6 @@
 package com.leolego.board.web.article;
 
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
 
@@ -14,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.leolego.board.domain.article.Article;
 import com.leolego.board.domain.article.ArticleRepository;
 
-@Slf4j
 @Controller
 @RequestMapping("/articles")
 @RequiredArgsConstructor
@@ -36,5 +34,12 @@ public class ArticleController {
 		model.addAttribute("article", article);
 		return "articles/article";
 		
+	}
+	
+	@GetMapping("/addArticleForm")
+	public String addArticleForm(Model model) {
+		
+		model.addAttribute("article", new Article());
+		return "articles/addArticleForm";
 	}
 }
