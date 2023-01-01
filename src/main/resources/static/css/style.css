@@ -11,9 +11,9 @@
 
 /* addArticleForm */
 .addArticlei-con { margin: 10px 20px; }
-.addArticlei-con > input { width: 360px; }
-.addArticlei-con > label { display: inline-block; width: 120px; }
-.addArticlei-con > textarea { width: 360px; height: 720px; resize: none; }
+.addArticlei-con > input { width: 100%; }
+.addArticlei-con > label { display: block; width: 120px; }
+.addArticlei-con > textarea { width: 100%; height: 720px; resize: none; }
 
 .addArticles-con { display: flex; padding: 5px 15px; }
 .addArticles-con > button { width: 80px; margin: 5px; }
@@ -21,11 +21,15 @@
 .addArticlesp-con { width: 360px; }
 
 /* article */
+.article-con { padding: 5px 15px; }
+.article-con > button { width: 120px; margin: 5px; }
+
 .articleb-con { display: flex; padding: 5px 15px; }
 .articleb-con > button { width: 120px; margin: 5px; }
 
 /* articles */
-.articles-con { display: flex; padding: 5px 15px; }
+.articles-con { padding: 5px 15px; }
+.articles-con > table { width: 100%; margin: 15px 0; }
 
 .articlesb-con { display: flex; padding: 5px 15px; }
 .articlesb-con > button { width: 120px; margin: 5px; }

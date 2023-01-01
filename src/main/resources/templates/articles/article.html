@@ -16,5 +16,11 @@
 			<li>content: <span th:text="${articlev.content}"></span></li>
 		</ul>
 	</div>
+	
+	<div class="articleb-con">
+        <button onclick="location.href='articles.html'"
+                th:onclick="|location.href='@{/articles}'|"
+                type="button">articles</button>
+    </div>
 </body>
 </html>
